@@ -1,0 +1,28 @@
+.media-manager-list-tree {
+    .list-group {
+        margin-bottom: 0;
+    }
+    .list-group-item {
+        padding: 6px 6px;
+        cursor: pointer;
+        border: none;
+        &.selected {
+            border-radius: 4px;
+            background-color: #337ab7;
+            color: #fff;
+        }
+        .media-manager-file {
+            display: inline-block;
+        }
+    }
+    .glyphicon-file:before {
+        content: "\2212";
+        color: transparent;
+    }
+    .glyphicon-folder-closed:before {
+        content: "\e250";
+    }
+    .glyphicon-folder-open:before {
+        content: "\e252";
+    }
+}

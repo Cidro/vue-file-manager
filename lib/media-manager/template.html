@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-sm-4">
+        <file-list view-type="tree" :current-folder="sidebar.currentFolder"></file-list>
+        <pre>{{ sidebar | json }}</pre>
+    </div>
+    <div class="col-sm-8">
+        <file-list view-type="folder" :current-folder="main.currentFolder"></file-list>
+        <pre>{{ main | json }}</pre>
+    </div>
+    
+</div>

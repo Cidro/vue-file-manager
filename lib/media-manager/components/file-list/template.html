@@ -1,0 +1,13 @@
+<div class="media-manager-file-list">
+
+    <path :path="currentFolder.path"></path>
+    
+    <div v-if="viewType=='tree'">
+        <tree :current-folder="currentFolder"></tree>
+    </div>
+
+    <div v-if="viewType=='folder'">
+        <folder :current-folder="currentFolder"></folder>
+    </div>
+
+</div>

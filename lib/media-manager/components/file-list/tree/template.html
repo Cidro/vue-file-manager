@@ -1,0 +1,18 @@
+<div class="media-manager-list-tree">
+    <ul class="list-group">
+        <li v-for="(index, file) in currentFolder.files" v-bind:class="{ 'selected': file.selected }" class="list-group-item" @click.stop="handleFileClick(file)">
+            <div>
+                <span 
+                    v-bind:class="{
+                        'glyphicon-folder-closed': (file.type == 'folder' && !file.expanded),
+                        'glyphicon-folder-open': (file.type == 'folder' && file.expanded),
+                        'glyphicon-file': file.type == 'file'
+                    }"
+                    class="glyphicon"
+                    @click.stop="handleClickExpandFolder(file)"></span>
+                <file :file="file"></file>
+            </div>
+            <tree v-if="file.type == 'folder' && file.expanded" :current-folder="file"></tree>
+        </li>
+    </ul>
+</div>
